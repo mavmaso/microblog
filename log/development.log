@@ -243,3 +243,91 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-26 19:39:14 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mavmaso/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 514ms (Views: 479.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-26 19:39:22 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E9rpC+/nnHG4lTP1LBaURJDcJu68qvOp+vQ3IW8AEd09fUW+cCJRNuBrj8CjM/J4rJX/jKTO+K7K7D1zjzg37Q==", "article"=>{"title"=>"", "description"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `titles' for #<Article:0x00007f7f280ca7c0>
+Did you mean?  title
+               title?
+               title=):
+  
+app/controllers/articles_controller.rb:9:in `create'
+Started PUT "/__web_console/repl_sessions/a3670c9039101f3aac1cc33c61f4e2ff" for 127.0.0.1 at 2018-10-26 19:39:49 -0300
+Started PUT "/__web_console/repl_sessions/a3670c9039101f3aac1cc33c61f4e2ff" for 127.0.0.1 at 2018-10-26 19:39:52 -0300
+Started PUT "/__web_console/repl_sessions/a3670c9039101f3aac1cc33c61f4e2ff" for 127.0.0.1 at 2018-10-26 19:39:56 -0300
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-26 19:41:12 -0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-26 19:42:49 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bqK8lJc16kI5g6BSzC9Qu39haINxGMZ1MymdRbXI8RJABRAhCPAnBWF9HGdDCjaHQyix4Wl8zXIDMZcXVfDXIg==", "article"=>{"title"=>"teste", "description"=>"sei la"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `titles' for #<Article:0x00007f7f3928eed8>
+Did you mean?  title
+               title?
+               title=):
+  
+app/controllers/articles_controller.rb:9:in `create'
+Started POST "/articles" for 127.0.0.1 at 2018-10-26 19:45:44 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bqK8lJc16kI5g6BSzC9Qu39haINxGMZ1MymdRbXI8RJABRAhCPAnBWF9HGdDCjaHQyix4Wl8zXIDMZcXVfDXIg==", "article"=>{"title"=>"", "description"=>"sei la"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 93ms (Views: 43.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-26 20:16:25 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tJKIj/2hnxV5Lc8581OXxUZ7N+WJbry7hJ6ACT+E+FqaNSQ6YmRSUiHTcwx8dvH5ejLuh5EKt7y0hopb37zeag==", "article"=>{"title"=>"aaa", "description"=>"sei la so quero escrever"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+  [1m[36mArticle Create (2.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "aaa"], ["description", "sei la so quero escrever"], ["created_at", "2018-10-26 23:16:25.734623"], ["updated_at", "2018-10-26 23:16:25.734623"]]
+  ↳ app/controllers/articles_controller.rb:9
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:9
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 33ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-10-26 20:16:25 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:17
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
