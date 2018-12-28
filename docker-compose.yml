@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  web:
+    container_name: ruby-microblog
+    hostname: ruby-microblog
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/microblog
+    ports:
+      - 3000:3000
+    links:
+      - db
+    env_file:
+      - .env.docker
+    # tty: true
+  db:
+    container_name: db-microblog
+    hostname: db-microblog
+    image: postgres:10.3-alpine
+    ports:
+      - 5432:5432
+    env_file:
+      .env.docker
+    volumes:
+      - microblog-data:/var/lib/postgresql/data
+volumes:
+  microblog-data:
