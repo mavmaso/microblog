@@ -12,7 +12,7 @@ RUN apt-get install -y libqtwebkit4 libqt4-dev xvfb
 # for a JS runtime
 RUN apt-get install -y nodejs
 
-ENV APP_HOME /microblog
+ENV APP_HOME /fonte
 RUN mkdir $APP_HOME
 COPY . $APP_HOME
 WORKDIR $APP_HOME
@@ -21,3 +21,6 @@ ADD Gemfile* $APP_HOME/
 RUN echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
 RUN bundle install
 ADD . $APP_HOME
+
+# expor a pasta public para nginx
+VOLUME ["$APP_HOME/public"]
