@@ -23,4 +23,4 @@ RUN bundle install
 ADD . $APP_HOME
 
 # expor a pasta public para nginx
-VOLUME ["$APP_HOME/public"]
+# VOLUME ["$APP_HOME/public"]

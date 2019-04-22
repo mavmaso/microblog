@@ -23,6 +23,11 @@ $navbar-default-bg: #03031a;
 }
 
 footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  background-color: #f5f5f5;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
