@@ -6,4 +6,4 @@ before_script:
 script:
   - bundle exec rspec --format documentation
   - bundle exec rubocop --config .rubocop.yml
-  - bundle-audit check --update
+  # - bundle-audit check --update
