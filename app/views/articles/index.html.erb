@@ -10,6 +10,11 @@
       </div>
       <div class="article-body">
         <%= truncate(article.description, lenght: 100) %>
+        <div class="article-meta-details">
+          <small>Escrito por: <%= article.user.username if article.user %>,
+            á <%= time_ago_in_words(article.created_at) %> 
+          </small>
+        </div>
       </div>
       <div class="article-action">
         <%= link_to 'Editar', edit_article_path(article), class:"bnt btn-xs btn-primary"%>
