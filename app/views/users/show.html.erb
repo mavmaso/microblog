@@ -1,0 +1,8 @@
+<h1 align='center'>Bem-vindo <%= @user.username %> ao seu perfil</h1>
+<div class="row">
+  <div class="col col-mid-offset-4 center">
+    <%= gravatar_for @user, size: 200 %>
+  </div>
+</div>
+<h4 align='center'><%= @user.username %>, esse sao seus artigos: </h4>
+<%= render 'articles/article', obj: @user.articles %>
