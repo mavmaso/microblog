@@ -33,7 +33,7 @@
 
       <div class='form-group'>
         <div class='col-sm-offset-2 col-sm-10'>
-          <%= f.submit "Cadastrar-se", class:'btn btn-primary btn-lg' %>
+          <%= f.submit(@user.new_record? ? 'Cadastrar-se' : 'Atualizar', class:'btn btn-primary btn-lg') %>
         </div>
       </div>
 
