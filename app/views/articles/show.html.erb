@@ -2,6 +2,7 @@
 <div class="well col-xs-offset-2">
   <h4 class="center"><strong>Descrição: </strong></h4>
   <hr>
+  
   <%= simple_format(@article.description) %>
   <div class="article-action">
     <%= link_to 'Editar', edit_article_path(@article), class:"bnt btn-xs btn-primary"%>
