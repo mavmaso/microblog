@@ -13,11 +13,14 @@
   <h4 class="center"><strong>Descrição: </strong></h4>
   <hr>
   <%= simple_format(@article.description) %>
-  <div class="article-action">
-    <%= link_to 'Editar', edit_article_path(@article), class:"bnt btn-xs btn-primary"%>
-    <%= link_to "Apagar", article_path(@article), method: :delete,
-                          data: { confirm: "Tem certeza?"},
-                          class:"bnt btn-xs btn-danger"%>
-    <%= link_to 'Index', articles_path, class:"bnt btn-xs btn-success" %>
+  <% if logged_in? && current_user == @article.user %>
+    <div class="article-action">
+      <%= link_to 'Editar', edit_article_path(@article), class:"bnt btn-xs btn-primary"%>
+      <%= link_to "Apagar", article_path(@article), method: :delete,
+                            data: { confirm: "Tem certeza?"},
+                            class:"bnt btn-xs btn-danger"%>
+      <%= link_to 'Index', articles_path, class:"bnt btn-xs btn-success" %>
+    </div>
+  <% end %>
   </div>
 </div>
