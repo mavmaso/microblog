@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'activesupport'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
