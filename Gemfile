@@ -30,6 +30,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.58.1', require: false
   gem 'rspec-rails', '~> 3.8'
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
 end
 
 group :development do
