@@ -8,7 +8,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
     assert_difference 'Category.count', 1 do
       post categories_path, params: { category: { name: 'sports' } }
     end
-    assert_template 'categories/index'
+    assert_template 'categories/'
     assert_match 'sports', response.body
   end
 end
