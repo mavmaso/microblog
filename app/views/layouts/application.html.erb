@@ -15,7 +15,7 @@
     <div class='container-fluid'>
       <%= yield %>
     </div>
-    <%= debug(params) if Rails.env.development? %>
+    <%= debug(params) if Rails.env.test? %>
     &nbsp
     <%= render 'layouts/footer' %>
   </body>

@@ -13,6 +13,9 @@
   <h4 class="center"><strong>Descrição: </strong></h4>
   <hr>
   <%= simple_format(@article.description) %>
+  <% if @article.categories.any? %>
+    <p>Categorias: <%= render @article.categories %></p>
+  <% end %>
   <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
     <div class="article-action">
       <%= link_to 'Editar', edit_article_path(@article), class:"bnt btn-xs btn-primary"%>
